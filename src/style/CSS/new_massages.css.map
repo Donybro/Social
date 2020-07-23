@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACT,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,gBAAgB,EAAE,OAAkB;CACtC",
+    "sources": [
+        "../SCSS/new_massages.scss"
+    ],
+    "names": [],
+    "file": "new_massages.css"
+}

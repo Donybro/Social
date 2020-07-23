@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAA;EACR,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAkB;CACtC",
+    "sources": [
+        "../SCSS/add_new_post.scss"
+    ],
+    "names": [],
+    "file": "add_new_post.css"
+}
