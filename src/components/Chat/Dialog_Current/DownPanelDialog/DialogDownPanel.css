@@ -1,0 +1,52 @@
+.currentDialog__downpanel{
+   height: 50px;
+   width: 730px;
+   background: rgb(233, 220, 220);
+   align-self: flex-end;
+   display: flex;
+  justify-content: center;
+   align-items: center;
+
+}
+.downpanel__menu{
+   width: 600px;
+   height: 40px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   background-color: #fff;
+}
+
+.currentDialog__downpanel_smile {
+   width: 26px;
+   height: 26px;
+   margin-left: 12px;
+   display: inline-block;
+   cursor: pointer;
+}
+.currentDialog__downpanel_addPicture{
+ display: inline-block;
+ width: 27px;
+ height: 27px;
+ margin-left: 10px;
+ cursor: pointer;
+
+}
+.currentDialog__downpanel__textarea{
+ width: 480px;
+ height: 100%;
+ resize: none;
+ padding-top: 0px;
+ font-size: 18px;
+ line-height: 16px;
+ padding-left: 15px;
+ padding-right: 10px;
+}
+
+.currentDialog__downpanel_send{
+ margin-left: 8px;
+ width: 26px;
+ height: 26px;
+ display: inline-block;
+ cursor: pointer;
+}

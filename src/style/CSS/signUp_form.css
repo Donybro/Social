@@ -1,0 +1,104 @@
+.signUp_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #65C3BA;
+}
+
+.signUp_form {
+  width: 350px;
+  height: 375px;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffffff;
+  border: 2px solid #EAE9E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 24px 2px rgba(46, 34, 46, 0.39);
+  box-shadow: 0px 0px 24px 2px rgba(46, 34, 46, 0.39);
+}
+
+.form__email, .form__password {
+  width: 270px;
+  height: 50px;
+  margin: 30px 40px 0 0;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding-left: 25px;
+  font-size: 19px;
+  line-height: 16px;
+  margin-right: 0px;
+  color: black;
+  border: 2px solid #b4b2b2;
+}
+
+.form__email:focus, .form__password:focus {
+  -webkit-box-shadow: inset 0px 0px 12px 2px #e3e4e6;
+  box-shadow: inset 0px 0px 12px 2px #e2e4e5;
+}
+
+.form__password {
+  margin-top: 20px;
+}
+
+.forgot_password {
+  color: black;
+  float: right;
+  margin-right: 40px;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  margin-top: 14px;
+  margin-right: -120px;
+}
+
+.form__logIn_btn {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #000000;
+  font-size: 18px;
+  line-height: 21px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 30px;
+  color: #000;
+  margin-top: 20px;
+  background-color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form__signUp_btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 315px;
+  height: 50px;
+  background: #65C3BA;
+  border-radius: 30px;
+  margin-top: 61px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 14px;
+}
+/*# sourceMappingURL=signUp_form.css.map */

@@ -1,0 +1,28 @@
+
+.dialogCurrent__colluctor{
+   align-items: flex-start;
+   height: 40px;
+   width: 730px;
+   background: rgba(101, 195, 186, 0.2); 
+   display: flex;
+}
+.colluctor__photo{
+   margin-left: 30px;
+   height: 36px;
+   width: 36px;
+   background-color: #35A79C;
+   display: inline-block;
+   border-radius: 50%;
+   align-self: center;
+}
+.colluctor__name{
+   margin-left: 10px;
+   align-self: center;
+   display: inline-block;
+   height: 30px;
+   width: 200px;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 18px;
+   margin-top: 10px;
+}

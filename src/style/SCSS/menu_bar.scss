@@ -6,14 +6,18 @@ body{
 .menu_bar{
    background: linear-gradient(260.41deg, #54B2A9 0%, #35A79C 100%);
    width: 1440px;
-   height: 80px;
+   height: 50px;
    margin: 0 auto;
    display: flex;
    justify-content: flex-start;
    align-items: center;
+   position: fixed;
+   z-index: 2;
+   top: 0;
    
 .menu_bar_logo{
    margin-left: 165px;
+   a{ color: white;}
    div {
       width: 100px;
       color: rgb(253, 253, 253);
@@ -30,23 +34,41 @@ body{
 
 .menu_bar_friends{
    margin-left: 120px;
-     width: 32px;
-     height: 24px;
+   
 }
 .menu_bar_peoples{
    margin-left: 30px;    
-    width: 32px;
-     height: 24px;
+   
 }
 .menu_bar_chat{    
    margin-left: 30px;
-   width: 24px;
-   height: 24px;
+ 
 }
 .menu_bar_profile{ 
    margin-left: 30px;    
-   width: 26px;
-     height: 26px;
+   
+}
+.menu_bar_profile,.menu_bar_chat,.menu_bar_chat,.menu_bar_peoples,.menu_bar_friends{
+   user-select: none;
+   width: 45px;
+   height: 45px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius:50%;
+   &:hover{
+      -webkit-box-shadow: 0px 0px 19px 2px rgba(44, 153, 128, 0.67);
+      -moz-box-shadow: 0px 0px 19px 2px rgba(37, 182, 155, 0.67);
+      box-shadow: 0px 0px 19px 2px rgba(14, 138, 123, 0.67);
+       background-color: linear-gradient(260.41deg, rgb(19, 85, 78) 0%, rgb(47, 148, 138) 100%);
+   }
+   &:active{
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(176, 228, 216, 0.67);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(180, 233, 223, 0.67);
+      box-shadow: 0px 0px 10px 2px rgba(183, 224, 220, 0.67);
+       background-color: linear-gradient(260.41deg, rgb(175, 221, 216) 0%, rgb(172, 228, 222) 100%);
+   }
 }
 .menu_bar_search{
    margin-left: 40px;
@@ -82,9 +104,16 @@ body{
    font-weight: normal;
    font-size: 18px;
    line-height: 21px;
+   &:hover{
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(32, 100, 84, 0.67);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(28, 136, 116, 0.67);
+      box-shadow: 0px 0px 10px 2px rgba(13, 98, 88, 0.67);
+       background-color: linear-gradient(260.41deg, rgb(17, 73, 68) 0%, rgb(29, 97, 90) 100%);
+   }
 }
 
 .menu_bar_logout{
+   user-select: none;
    margin-left: 120px;
    border: 1px solid #FFFFFF;
    box-sizing: border-box;
@@ -97,11 +126,21 @@ body{
    color: #fff;
    font-weight: bold;
    &:hover{
-      height: 33px;
       -webkit-box-shadow: 0px 0px 19px 2px rgba(44, 153, 128, 0.67);
       -moz-box-shadow: 0px 0px 19px 2px rgba(37, 182, 155, 0.67);
       box-shadow: 0px 0px 19px 2px rgba(14, 138, 123, 0.67);
        background-color: linear-gradient(260.41deg, rgb(19, 85, 78) 0%, rgb(47, 148, 138) 100%);;
    }
+   &:active{
+      height: 33px;
+   }
 }
+}
+
+.activeMenuIcon{
+   
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(176, 228, 216, 0.67);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(180, 233, 223, 0.67);
+      box-shadow: 0px 0px 10px 2px rgba(183, 224, 220, 0.67);
+       background-color: linear-gradient(260.41deg, rgb(175, 221, 216) 0%, rgb(172, 228, 222) 100%);
 }

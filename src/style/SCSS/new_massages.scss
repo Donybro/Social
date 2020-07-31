@@ -1,5 +1,28 @@
 .newMassages{
+   margin: 0 auto;
+   margin-top: 20px;
+   text-align: center;
    height: 378px;
-   width: 100%;
-   background-color: rgb(142, 233, 124);
+   width: 350px;
+   background: rgba(101, 195, 186, 0.3);
+   color: rgb(39, 39, 39);
+   font-size: 18px;
+   overflow: auto;
+
 }
+.newMassages__massages-blocks{
+   width: 270px;
+   height: 70px;
+   background-color: #fff;
+   border-radius: 8px;
+   margin: 20px 30px 20px 30px;
+}
+
+::-webkit-scrollbar { width: 8px;}
+//::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background: #EBEBEB; }
+::-webkit-scrollbar-track-piece { background: #EBEBEB;border-radius:7px;}
+::-webkit-scrollbar-thumb {background: rgb(207, 206, 206); border-radius: 5px;}
+::-webkit-scrollbar-thumb:hover {background: rgb(160, 159, 159)}
+::-webkit-scrollbar-corner { background-color: #999;}
+::-webkit-resizer { background-color: #666;}

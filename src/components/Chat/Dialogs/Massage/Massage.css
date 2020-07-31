@@ -1,0 +1,49 @@
+.massage__block{
+   margin-top: 20px;
+   width: 370px;
+   height: 70px;
+   background-color: #fff;
+   border-radius: 8px;
+   display: flex;
+   flex-wrap: wrap;
+   overflow: hidden;
+   cursor: pointer;
+   margin-left: 40px;
+}
+
+.massage__block__user-photo {
+   width: 40px;
+   display: inline-block;
+   height: 40px;
+   border-radius: 50%;
+   background-color: #35A79C;
+   margin: 15px 0 15px 15px;
+}
+.massage__block__user-name{
+   margin-top: 15px;
+   border-radius: 8px;
+   width: 280px;
+   height: 16px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 16px;
+   color: #000000;
+   padding-left: 10px;
+}
+.massage__block__last-massage{
+   font-weight: 300;
+   font-size: 12px;
+   line-height: 14px;
+   width: 280px;
+   height: 16px;
+   color: #000000;
+   align-self: flex-start;
+   margin-left: 65px;
+   margin-top: -35px;
+   display: block;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+  
+
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import "../style/CSS/menu_bar.css";
+import "../MenuBar/menu_bar.css";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -9,7 +10,7 @@ function MenuBar() {
       <div className="menu_bar">
          <div className="menu_bar_logo">
             {/* <img src="/images/menu_bar/social1.png" alt="" /> */}
-            <div><p>SOCIAL</p></div>
+            <div><NavLink to="/main" >SOCIAL</NavLink></div>
          </div>
          <div className="menu_bar_friends">
             <a href="#">
@@ -21,11 +22,9 @@ function MenuBar() {
                <img src="/images/menu_bar/Vector-7.png" alt="" />
             </a>
          </div>
-         <div className="menu_bar_chat">
-            <a href="#">
+         <NavLink to="/Chat" activeClassName="activeMenuIcon" className="menu_bar_chat">
                <img src="/images/menu_bar/Vector-5.png" alt="" />
-            </a>
-         </div>
+         </NavLink>
          <div className="menu_bar_profile">
             <a href="#">
                <img src="/images/menu_bar/Vector-6.png" alt="" />
@@ -36,7 +35,7 @@ function MenuBar() {
             <div><img src="/images/menu_bar/Vector-8.png" alt=""/></div>
            
          </div>
-         <div className="menu_bar_logout">Log out</div>
+         <NavLink to='/SignUp' className="menu_bar_logout">Log out</NavLink>
 
       </div>
    )

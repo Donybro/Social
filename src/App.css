@@ -1,11 +1,19 @@
+body{
+   background: #fff5ee
+}
 .App{
    width: 1440px;
    height: 100%;
    margin: 0 auto;
+ 
 }
 .wrapper{
    display: flex;
    width: 1440px;
    height: 100%;
-   margin: 0 auto;
+   margin-top: 50px;
 }
+/* .wrapper_main{
+   width: 1440px;
+   height: 100%;
+} */

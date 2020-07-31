@@ -1,0 +1,40 @@
+.dialogs__block{
+   width: 450px;
+   height: 500px;
+   background: rgba(101, 195, 186, 0.2);
+   align-items: center;
+   overflow: auto;
+   margin-top: 60px;
+}
+.wrapper_dialogs{
+   height: 100%;
+   width: 350px;
+}
+.dialogs__block__search_block{
+   position: fixed;
+   background: rgb(101, 195, 186);
+}
+.dialogs__block__search_profile{
+   width: 450px;
+   height: 60px;
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+.dialogs__block__find-input{
+   width: 350px;
+   height: 35px;
+   border-radius: 30px;
+   margin: 0 auto;
+   padding-left: 20px;
+   padding-right: 35px;
+}
+.dialogs__block_find-icon{
+   width: 14px;
+   height: 14px;
+   position: absolute;
+   top: 23px;
+   right: 65px;
+   cursor: pointer;
+
+}

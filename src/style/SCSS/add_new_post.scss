@@ -1,17 +1,84 @@
 .addNewPost{
-   width: 100%;
-   height: 235px;
-   background-color: rgb(137, 104, 207);
+   width: 310px;
+   height: 135px;
+   position: relative;
+   z-index: 1;
+   margin: 0 auto;
+   margin-top: 30px;
+   .addNewPost__textarea{
+      width: 310px;
+      height: 95px;
+      outline: none;
+      background-color: #fff;
+      resize: none;
+      display: block;
+      background: #F7F7F7;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      border-left: 4px solid  rgb(207, 206, 206);
+      border-right: 4px solid  rgb(207, 206, 206);
+      border-top: 4px solid  rgb(207, 206, 206);
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 58px;
+      font-size: 18px;
+      line-height: 21px;
+
+      &:hover{
+         //border: 4px solid  rgb(160, 159, 159);
+      }
+   }
 }
-// .addNewPost__textarea{
+.addNewPost__textarea-down-panel{
+   width: 100%;
+   height: 40px;
+   background: #F7F7F7;
+   border-bottom: 4px solid  rgb(207, 206, 206);
+   border-right: 4px solid  rgb(207, 206, 206);
+   border-left: 4px solid  rgb(207, 206, 206);
+   border-bottom-left-radius: 7px;
+   border-bottom-right-radius: 7px;
 
-// }
-// .addNewPost__textarea-addSmile{
+   
+}
+.addNewPost__textarea-addSmile{
+   float: right;
+   margin-right: 15px;
+   user-select: none;
+}
+.addNewPost__textarea-addPicture{
+   input{
+      width: 0.1px;
+      height: 0.1px;
+      visibility: hidden;
+     
+   }
+   label{
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: url("/images/new_massages_block/addPicture.png") no-repeat;
+   }
+   float: right;
+   margin-right: 15px;
+   user-select: none;
 
-// }
-// .addNewPost__textarea-addPicture{
+ 
+}
+.addNewPost__addPostBtn{
+      margin-top: 8px;
+     img{
+         width: 50px;
+         height: 50px;
+     }
+      margin-right: 20px;
+      position: absolute;
+      bottom: -60px;
+      left: 120px;
+      border-radius : 50%;
+      cursor: pointer;
+      user-select: none;
 
-// }
-// .addNewPost__addPostBtn{
-
-// }
+}
