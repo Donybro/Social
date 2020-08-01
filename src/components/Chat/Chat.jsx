@@ -11,7 +11,7 @@ function Chat(props) {
             <MenuBar />
             <div className="wrapper__main_chat">
                <Dialogs state={props.state.dialogsBlock}/>
-               <DialogCurrent state ={props.state.currentDialogs} />
+               <DialogCurrent state ={props.state} dispatch={props.dispatch}/>
             </div>
          </div>
    )

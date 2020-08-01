@@ -12,10 +12,10 @@ function App(props) {
   return (
     <BrowserRouter>
         <Route path="/Main"   render={()=>{ return <AppMainContent state={props.state}
-                                                                   dispatch={props.dispatch}
-        /> }} />
+                                                                   dispatch={props.dispatch}/> }} />
         <Route path='/SignUp' component={SignUpForm}/>
-        <Route path="/Chat"   render={()=>{ return<Chat state={props.state.chatPage} /> }} />  
+        <Route path="/Chat"   render={()=>{ return<Chat state={props.state.chatPage}  
+                                                        dispatch={props.dispatch}/> }} />  
     </BrowserRouter>
   );
 }

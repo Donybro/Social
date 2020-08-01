@@ -13,7 +13,7 @@
    align-self: flex-end;
    flex: 0 0 35px;
    height: 35px;
-   background-color: rgb(133, 201, 189);
+   background-color: rgb(178, 228, 219);
    border-radius: 30px;
    font-size: 16px;
    line-height: 35px;
@@ -31,7 +31,7 @@
    align-self: flex-start;
    flex: 0 0 35px;
    height: 35px;
-   background-color: rgb(204, 209, 130);
+   background-color: rgb(178, 228, 219);
    margin-left: 5px;
 }
 .time{

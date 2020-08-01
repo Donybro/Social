@@ -1,3 +1,5 @@
+import profileReducer from "./profile-reducer";
+import chatReducer from "./chat-reducer";
 
 let store= {
    _state:{
@@ -29,6 +31,7 @@ let store= {
             {id:8,name:"Viktor",lastMassage:"811111"},
    
          ],
+         currentMassage:""
       },
       profilePage:{
          posts:[ {id:1,massage:"HELLO"},
@@ -52,22 +55,11 @@ let store= {
       this.rerenderEntireTree = observer;
    }, 
    dispatch(action){
-      if(action.type==="ADD-POST"){
-         let newPost = {
-            id:"5",  
-            massage: this._state.profilePage.newPostText
-         }
-         if(newPost.massage===""){
-            return 0;
-         }
-         this._state.profilePage.posts.push(newPost);
-         this._state.profilePage.newPostText="";
-         this.rerenderEntireTree(this._state);
-      } 
-      else if(action.type==="ON-CHANGE-ADD-POST"){
-         this._state.profilePage.newPostText=action.massage;
-         this.rerenderEntireTree(this._state); 
-      }
+
+      this._state.profilePage = profileReducer(this._state.profilePage,action);
+      this._state.chatPage    = chatReducer(this._state.chatPage,action);
+      
+      this.rerenderEntireTree(this._state);
    }
 
 
@@ -76,19 +68,9 @@ window.store = store;
 
 export default store;
 
-export const addPostActionCreator = ()=>{
-  return {
-      type: "ADD-POST",
-   }
-};
-export const onChangeAddPostActionCreator = (msg)=>{
-   return {
-       type : "ON-CHANGE-ADD-POST",
-       massage : msg,   
-    }
- };
 
-
+ 
+ 
 
 /*
    addPost(){

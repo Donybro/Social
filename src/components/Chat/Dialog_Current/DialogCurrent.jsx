@@ -10,8 +10,8 @@ function DiaologCurrent(props) {
       return (
             <div className="wrapper__dialogCurrent">
                   <Colluctor user={props.state}/>
-                  <Correspondence state={props.state} />
-                  <DialogDownPanel />
+                  <Correspondence state={props.state.currentDialogs} />
+                  <DialogDownPanel  state={props.state} dispatch={props.dispatch}/>
             </div>
       )
 }
