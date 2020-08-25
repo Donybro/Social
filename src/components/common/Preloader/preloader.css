@@ -1,0 +1,9 @@
+.preloader{
+    width: 200px;
+    height: 200px;
+    margin-left: 220px;
+}
+.preloader__wrapper{
+    width: 600px;
+    height: 590px;
+}

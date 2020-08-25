@@ -1,0 +1,15 @@
+.usersBLock{
+    width: 630px;
+    height: 590px;
+    margin: 0 auto;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.wrapper_users{
+    position: absolute;
+    left: calc(50% - 720px);
+    width: 1440px;
+    margin: 0 auto;
+    background: rgba(101, 195, 186, 0.2);
+}
+

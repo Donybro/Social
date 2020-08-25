@@ -1,22 +1,39 @@
 import React from 'react';
 
-import MenuBar from "../App_Main_Content/MenuBar/menu_bar";
 import SideBar from "../App_Main_Content/SideBar/side_bar";
 import Posts from "../App_Main_Content/Posts/posts";
-import { NavLink } from 'react-router-dom';
+import {connect} from "react-redux";
+import {getAuthMeThunkCreator} from "../../redux/auth-reducer";
 
-function AppMainContent(props) {
-   return (
-         <div className="wrapper_main">
-            <div className="App">
-               <MenuBar />
-               <div className="wrapper">
-                  <SideBar state={props.state}
-                           dispatch={props.dispatch} />
-                  <Posts state={props.state} />
-               </div>
+import "./AppMainContent.css"
+import withAuthRedirect from "../../hoc/withAuthRedirect";
+import {compose} from "redux";
+
+class AppMainContent extends React.Component{
+    render(){
+        console.log(this.props.isAuth)
+       return (
+            <div className="wrapper_main">
+                <div className="App">
+                    <div>
+                        <div className="wrapper">
+                            <SideBar state={this.props.state} dispatch={this.props.dispatch} />
+                            <Posts state={this.props.state} />
+                        </div>)
+                    </div>
+                </div>
             </div>
-         </div>
-   )
+        )}
+    }
+
+ const mapStateToProps = (state)=>{
+    return{
+        isAuth:state.auth.isAuth
+    }
 }
-export default AppMainContent;
+
+export default compose(
+    connect(mapStateToProps,{getAuthMeThunkCreator}),
+    withAuthRedirect,
+)(AppMainContent);
+

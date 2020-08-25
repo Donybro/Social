@@ -2,18 +2,18 @@ import React from "react";
 
 import "../Dialog_Current/Dialog_Current.css"
 import Colluctor from "./Colluctor/Colluctor";
-import DialogDownPanel from "./DownPanelDialog/DialogDownPanel";
 import { Correspondence } from "./Correspondence/Correspondece";
+import DialogDownPanelContainer from "./DownPanelDialog/DialogDownPanelContainer";
 
 
-function DiaologCurrent(props) {
+function CurrentDialog(props) {
       return (
             <div className="wrapper__dialogCurrent">
-                  <Colluctor user={props.state}/>
-                  <Correspondence state={props.state.currentDialogs} />
-                  <DialogDownPanel  state={props.state} dispatch={props.dispatch}/>
+                  <Colluctor/>
+                  <Correspondence currentDialogs={props.currentDialogs} />
+                  <DialogDownPanelContainer />
             </div>
       )
 }
 
-export default DiaologCurrent;
+export default CurrentDialog;

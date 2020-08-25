@@ -1,0 +1,63 @@
+.auth__card{
+    width: 180px;
+    height: 45px;
+    border: 2px solid #65C3BA;
+    margin-left: 100px;
+    background-color: #41aba1;
+    border-radius: 30px;
+    -webkit-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.29);
+    box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.29);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.auth__card_photo{
+    margin-left: 2px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color:#FF6378;
+}
+.auth__card_login{
+    height: 23px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+    color: white;
+}
+.auth__card_logout{
+    margin-top: -18px;
+    height: 18px;
+    width: 60px;
+    border: 1px solid #fff;
+    background-color: #ab251b;
+    box-sizing: border-box;
+    line-height: 18px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    margin-left: 50px;
+}
+.auth__card_signIn{
+    height: 40px;
+    width: 80px;
+    border: 2px solid #65C3BA;
+    border-radius: 30px;
+    margin-left: 100px;
+    -webkit-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.29);
+    box-shadow: 0px 0px 14px 1px rgba(0,0,0,0.29);
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 1.5px;
+
+}
+.auth__card_signIn:active{
+    height: 39px;
+}

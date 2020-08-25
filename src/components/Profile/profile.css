@@ -1,0 +1,12 @@
+.profile__wrapper{
+    width: 1440px;
+    height: 100%;
+}
+.profilePage{
+    width: 1440px;
+    height: 700px;
+}
+.profilePage__background_photo{
+    width: 1440px;
+    height: 300px;
+}

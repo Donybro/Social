@@ -6,7 +6,7 @@ import "../Correspondence/Correspondence.css";
 
 function CorrespondenceMassage(props){
       return(
-            props.state.map( (msg)=>{
+            props.currentDialogs.map( (msg)=>{
                return(
                   <div className={msg.msgDirection}> {msg.text} </div>
                )
@@ -17,7 +17,7 @@ function CorrespondenceMassage(props){
 export function  Correspondence(props) {
       return(
          <div className="correspondence__wrapper">
-                     <CorrespondenceMassage state={props.state}  / >
+                     <CorrespondenceMassage currentDialogs={props.currentDialogs}  />
          </div>
       )
 }

@@ -1,0 +1,111 @@
+.userItem{
+    width: 600px;
+    height: 75px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.linkToProfile{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    color: black;
+}
+.userItem:last-child{
+    margin-bottom: 54px;
+}
+.userItem__photo{
+    text-align: center;
+    line-height: 60px;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    background-color: #98FF34;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+.userItem__name{
+    height: 65px;
+    width: 200px;
+    margin-left: 30px;
+}
+.userItem__name_nickname{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+
+}
+.userItem__name_status{
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 21px;
+}
+.userItem__follow_btn{
+    width: 140px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 2px solid #65C3BA;
+    box-sizing: border-box;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 100px;
+    cursor: pointer;user-select: none;
+}
+.userItem__unfollow_btn {
+    width: 140px;
+    height: 40px;
+    background: #FFFFFF;
+    border: 2px solid #FF6378;
+    box-sizing: border-box;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    margin-left: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+.userItem__follow_btn:active{
+    height: 38px;
+}
+.userItem__unfollow_btn:active{
+    height: 38px;
+}
+.getUsers_button{
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #b4b2b2;
+    position: fixed;
+    bottom: 8px;
+    left: calc(50% - 25px);
+    color: #fff;
+}
+.listPage_button{
+    border: 1px solid #114944;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    user-select: none;
+}
+
+.listPage_wrapper{
+    display: flex;
+    justify-content: center;
+}
+.selectedListButton{
+    background-color:#41ABA1;
+    border: 1px solid #41ABA1;
+    color: white;
+
+}

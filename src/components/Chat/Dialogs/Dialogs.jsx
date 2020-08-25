@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Dialogs.css"
 import Massage from "./Massage/Massage";
+import MassageContainer from "./Massage/massageContainer";
 
 function Dialogs(props) {
    return (
@@ -13,7 +14,7 @@ function Dialogs(props) {
             </div>
          </div>
          <div className="dialogs__block">
-            <Massage state={props.state}/>
+            <MassageContainer/>
          </div>
       </div>
    )

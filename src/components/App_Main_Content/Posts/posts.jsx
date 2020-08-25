@@ -1,12 +1,12 @@
 import React from "react";
 import "./posts.css";
 
-import PostItem from "./Post_Item/post_item";
+import PostItemContainer from "./Post_Item/post_item_Container";
 
 function Posts (props){
    return(
       <div className="posts">
-         <PostItem state={props.state} />
+         <PostItemContainer />
    </div>
    )
 }

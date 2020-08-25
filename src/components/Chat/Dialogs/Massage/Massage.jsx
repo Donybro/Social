@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 function Massage(props) {
       return(
-         props.state.map( (user)=>{
+         props.dialogsBlock.map( (user)=>{
             return(
             <NavLink to={`${user.id}`} >
                <div className="massage__block">

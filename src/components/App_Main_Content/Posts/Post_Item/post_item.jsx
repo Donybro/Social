@@ -4,7 +4,7 @@ import "./post_item.css";
 
 function PostItem(props) {
    return (
-      props.state.profilePage.posts.map(el => {
+      props.posts.map(el => {
          return (
             <div className="post__item" >
                <div className="post__item-user">
