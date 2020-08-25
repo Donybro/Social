@@ -10,7 +10,7 @@ function Dialogs(props) {
          <div className="dialogs__block__search_block">
             <div className="dialogs__block__search_profile">
                <input className="dialogs__block__find-input" type="text" placeholder="profile" />
-               <img className="dialogs__block_find-icon" src="/images/dialogs/Vector-8.png" alt="" />
+               <img className="dialogs__block_find-icon" src="../../../../build/images/dialogs/Vector-8.png" alt="" />
             </div>
          </div>
          <div className="dialogs__block">

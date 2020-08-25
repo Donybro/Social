@@ -9,10 +9,10 @@ function DialogDownPanel(props) {
                 <div className="currentDialog__downpanel">
                     <div className="downpanel__menu">
                         <div className="currentDialog__downpanel_smile">
-                            <img src="/images/current_dialog/smile.png" alt=""/>
+                            <img src="../../../../../build/images/current_dialog/smile.png" alt=""/>
                         </div>
                         <div className="currentDialog__downpanel_addPicture">
-                            <img src="/images/current_dialog/addPicture.png" alt=""/>
+                            <img src="../../../../../build/images/current_dialog/addPicture.png" alt=""/>
                         </div>
                             <Field component={"textarea"}
                                    name={"massage"}
@@ -20,7 +20,7 @@ function DialogDownPanel(props) {
                                    placeholder="type something..."
                             />
                             <button className="currentDialog__downpanel_send">
-                                <img src="/images/current_dialog/send.png" alt=""/>
+                                <img src="../../../../../build/images/current_dialog/send.png" alt=""/>
                             </button>
                     </div>
                 </div>

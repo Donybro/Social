@@ -34,12 +34,12 @@ class App extends React.Component{
                 <Route path="/Chat"   render={()=>{ return<ChatContainer state={this.props.state.chatPage} dispatch={this.props.dispatch}/> }} />
 
                 <Route path="/Users"  render={()=>{ return  <Suspense fallback={<div>Загрузка...</div>}>
-                                                                <Users />
+                                                                <Users />/zC
                                                             </Suspense> }} />
 
                 <Route path="/Profile/:userId?"  render={()=>{ return <Suspense fallback={<div>Загрузка...</div>}>
                                                                             <ProfileContainer />
-                                                                     </Suspense> }} /> }} />
+                                                                     </Suspense> }} />
             </BrowserRouter>
         );
     }

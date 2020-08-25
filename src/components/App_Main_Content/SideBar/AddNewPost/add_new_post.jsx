@@ -24,7 +24,7 @@ function AddNewPost(props) {
                      </a>
                </div>
                <button className="addNewPost__addPostBtn" >
-                     <img src="/images/add_new_post/plus.png" alt=""/>
+                     <img src="../../../../../build/images/add_new_post/plus.png" alt=""/>
                </button>
          </div>
           </form>
