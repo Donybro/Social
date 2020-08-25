@@ -3,6 +3,13 @@ import "../MenuBar/menu_bar.css";
 import { NavLink } from "react-router-dom";
 import AuthContainer from "./Auth/AuthContainer";
 
+import friends_icon from "../../../assets/menu_bar/VectorFriends.png";
+import users_icon from "../../../assets/menu_bar/Vector-7.png";
+import chat_icon from "../../../assets/menu_bar/Vector-5.png";
+import profile_icon from "../../../assets/menu_bar/Vector-6.png";
+import search_icon from "../../../assets/menu_bar/Vector-8.png";
+
+
 function MenuBar() {
    return (
       <div className="menu_bar">
@@ -10,20 +17,20 @@ function MenuBar() {
             <div><NavLink to="/Main" >SOCIAL</NavLink></div>
          </div>
          <div className="menu_bar_friends">
-               <img src="../../../../build/images/menu_bar/VectorFriends.png" alt="" />
+               <img src={friends_icon} alt="" />
          </div>
            <NavLink to="/Users" activeClassName="activeMenuIcon" className="menu_bar_peoples" >
-               <img src="../../../../build/images/menu_bar/Vector-7.png" alt=""/>
+               <img src={users_icon} alt=""/>
            </NavLink>
          <NavLink to="/Chat" activeClassName="activeMenuIcon" className="menu_bar_chat">
-               <img src="../../../../build/images/menu_bar/Vector-5.png" alt="" />
+               <img src={chat_icon} alt="" />
          </NavLink>
          <NavLink to="/Profile" className="menu_bar_profile" activeClassName="activeMenuIcon">
-               <img src="../../../../build/images/menu_bar/Vector-6.png" alt="" />
+               <img src={profile_icon} alt="" />
          </NavLink>
          <div className="menu_bar_search">
             <input className="menu_bar_search_input" type="text" placeholder="search..."/>
-            <div><img src="../../../../build/images/menu_bar/Vector-8.png" alt=""/></div>
+            <div><img src={search_icon} alt=""/></div>
            
          </div>
           <AuthContainer />

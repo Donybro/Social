@@ -3,7 +3,6 @@ import React from "react";
 import "./Massage.css";
 import { NavLink } from "react-router-dom";
 
-
 function Massage(props) {
       return(
          props.dialogsBlock.map( (user)=>{

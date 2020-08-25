@@ -1,16 +1,15 @@
 import React from "react";
 
 import "./Dialogs.css"
-import Massage from "./Massage/Massage";
 import MassageContainer from "./Massage/massageContainer";
-
+import search_icon from "../../../assets/menu_bar/Vector-8.png";
 function Dialogs(props) {
    return (
       <div className="wrapper_dialogs">
          <div className="dialogs__block__search_block">
             <div className="dialogs__block__search_profile">
                <input className="dialogs__block__find-input" type="text" placeholder="profile" />
-               <img className="dialogs__block_find-icon" src="../../../../build/images/dialogs/Vector-8.png" alt="" />
+               <img className="dialogs__block_find-icon" src={search_icon} alt="" />
             </div>
          </div>
          <div className="dialogs__block">

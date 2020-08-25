@@ -1,7 +1,12 @@
 import React from "react";
+import addPictureIcon from "../../../../assets/current_dialog/addPicture.png"
+import addSmileIcon from "../../../../assets/current_dialog/smile.png"
+import sendIcon from "../../../../assets/current_dialog/send.png"
 
 import "./DialogDownPanel.css";
 import {Field} from "redux-form";
+
+
 
 function DialogDownPanel(props) {
     return (
@@ -9,10 +14,10 @@ function DialogDownPanel(props) {
                 <div className="currentDialog__downpanel">
                     <div className="downpanel__menu">
                         <div className="currentDialog__downpanel_smile">
-                            <img src="../../../../../build/images/current_dialog/smile.png" alt=""/>
+                            <img src={addSmileIcon} alt=""/>
                         </div>
                         <div className="currentDialog__downpanel_addPicture">
-                            <img src="../../../../../build/images/current_dialog/addPicture.png" alt=""/>
+                            <img src={addPictureIcon} alt=""/>
                         </div>
                             <Field component={"textarea"}
                                    name={"massage"}
@@ -20,7 +25,7 @@ function DialogDownPanel(props) {
                                    placeholder="type something..."
                             />
                             <button className="currentDialog__downpanel_send">
-                                <img src="../../../../../build/images/current_dialog/send.png" alt=""/>
+                                <img src={sendIcon} alt=""/>
                             </button>
                     </div>
                 </div>

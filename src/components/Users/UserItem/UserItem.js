@@ -17,7 +17,7 @@ class UserItem extends  React.Component{
         this.props.nextUsersListThunkCreator(this.props.usersInOnePage,pageNumber)
     }
     render(){
-        let pages =   Math.ceil(this.props.totalUsersCount / this.props.usersInOnePage);
+        let pages = Math.ceil(this.props.totalUsersCount / this.props.usersInOnePage);
         let pagesArr=[];
         for(let i=1 ; i<=pages ; i++) { pagesArr.push(i) }
         return (<div>
