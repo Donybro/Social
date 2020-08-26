@@ -2,7 +2,7 @@ import React, {Suspense} from 'react';
 
 import "./App.css";
 
-import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter, Route} from 'react-router-dom';
 import AppMainContentContainer from "./components/App_Main_Content/App_main_content";
 import ChatContainer from "./components/Chat/Chat";
 import MenuBar from "./components/common/MenuBar/menu_bar";
@@ -25,7 +25,7 @@ class App extends React.Component{
             return <Preloader />
         }
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <MenuBar/>
                 <Route path="/Main" render={()=>{ return <AppMainContentContainer state={this.props.state} dispatch={this.props.dispatch}/> }} />
 
@@ -33,14 +33,14 @@ class App extends React.Component{
 
                 <Route path="/Chat"   render={()=>{ return<ChatContainer state={this.props.state.chatPage} dispatch={this.props.dispatch}/> }} />
 
-                <Route path="/Users"  render={()=>{ return  <Suspense fallback={<div>Загрузка...</div>}>
-                                                                <Users />/zC
+                <Route path="/Users"  render={()=>{ return  <Suspense fallback={<Preloader/>}>
+                                                                <Users />/
                                                             </Suspense> }} />
 
-                <Route path="/Profile/:userId?"  render={()=>{ return <Suspense fallback={<div>Загрузка...</div>}>
+                <Route path="/Profile/:userId?"  render={()=>{ return <Suspense fallback={<Preloader/>}>
                                                                             <ProfileContainer />
                                                                      </Suspense> }} />
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }

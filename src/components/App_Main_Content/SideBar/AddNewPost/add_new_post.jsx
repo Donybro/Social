@@ -3,7 +3,8 @@ import React from "react";
 import "./add_new_post.css";
 import {Field} from "redux-form";
 
-
+import addSmileIcon from "../../../../assets/current_dialog/smile.png"
+import  addPostIcon  from "../../../../assets/add_new_post/plus.png"
 function AddNewPost(props) {
    return (
       <div className="addNewPost">
@@ -15,7 +16,7 @@ function AddNewPost(props) {
                    />
          <div className="addNewPost__textarea-down-panel">
                <div className="addNewPost__textarea-addSmile">
-                     <a href="#"><img src="/images/new_massages_block/addSmile.png" alt="" /></a>
+                     <a href="#"><img src={addSmileIcon} alt="" /></a>
                </div>
                <div className="addNewPost__textarea-addPicture">
                      <a>
@@ -24,7 +25,7 @@ function AddNewPost(props) {
                      </a>
                </div>
                <button className="addNewPost__addPostBtn" >
-                     <img src="../../../../../build/images/add_new_post/plus.png" alt=""/>
+                     <img src={addPostIcon} alt=""/>
                </button>
          </div>
           </form>
