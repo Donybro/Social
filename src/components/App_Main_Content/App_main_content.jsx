@@ -11,7 +11,6 @@ import {compose} from "redux";
 
 class AppMainContent extends React.Component{
     render(){
-        console.log(this.props.isAuth)
        return (
             <div className="wrapper_main">
                 <div className="App">

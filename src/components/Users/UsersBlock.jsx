@@ -1,6 +1,5 @@
 import React from "react";
 import  "./usersBlock.css"
-import MenuBar from "../common/MenuBar/menu_bar";
 import UserItemContainer from "./UserItem/UserItemContainer";
 function Users() {
     return(
