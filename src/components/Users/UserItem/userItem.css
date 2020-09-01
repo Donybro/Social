@@ -99,9 +99,44 @@
     user-select: none;
 }
 
-.listPage_wrapper{
+.listPage_Lists{
     display: flex;
     justify-content: center;
+}
+.listPage_wrapper{
+    position: relative;
+}
+.listPage_next_button{
+    position: absolute;
+    top: 0px;
+    right: 90px;
+    border: 1px solid #114944;
+    border-radius: 10px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #114944;
+    cursor: pointer;
+    background-color: #fff;
+    user-select: none;
+}
+.listPage_prev_button{
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    border: 1px solid #114944;
+    border-radius: 10px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #114944;
+    cursor: pointer;
+    background-color: #fff;
+    user-select: none;
 }
 .selectedListButton{
     background-color:#41ABA1;

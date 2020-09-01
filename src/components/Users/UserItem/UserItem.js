@@ -1,52 +1,87 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./userItem.css"
-import * as axios from "axios";
+
 import profile_default_photo from "../../../assets/blank-profile-picture-973460_640.png"
 import Preloader from "../../common/Preloader/Preloader";
 import {NavLink} from "react-router-dom";
-import API from "../../../api/API";
-import {nextUsersListThunkCreator} from "../../../redux/users-reducer";
+import { paginatorUsersList} from "../../../paginator";
 
 
-class UserItem extends  React.Component{
-    componentDidMount() {
-        this.props.getUsersThunkCreator(this.props.usersInOnePage,this.props.currentPage)
+
+function UserItem(props) {
+    useEffect(()=>{
+        props.getUsersThunkCreator(props.countUsersInOnePage,props.currentPage);
+    },[props.currentPage])
+
+
+    let [currentList ,setCurrentList] = useState(1);
+
+    let paginatorUsersChunks =  paginatorUsersList(props.totalUsersCount);
+    let lastChunk = Object.keys(paginatorUsersChunks).length;
+
+    let changeList = (pageNumber) => {
+        props.nextUsersListThunkCreator(props.countUsersInOnePage, pageNumber)
     }
 
-    changeList(pageNumber){
-        this.props.nextUsersListThunkCreator(this.props.usersInOnePage,pageNumber)
+    if(!props.isReady){
+        return <Preloader/>
     }
-    render(){
-        let pages = Math.ceil(this.props.totalUsersCount / this.props.usersInOnePage);
-        let pagesArr=[];
-        for(let i=1 ; i<=pages ; i++) { pagesArr.push(i) }
-        return (<div>
-                    <div className="listPage_wrapper">{
-                    pagesArr.map(p=>{
-                       return  <div className={this.props.currentPage===p? "listPage_button selectedListButton" : "listPage_button"} onClick={ ()=>{this.changeList(p)}}> {p} </div>
-                    })
-                }</div>
-                        {this.props.isFetching ? <Preloader /> : null}
-                    {this.props.users.map( (u)=>{
-                        return (
-                               <div className="userItem" key={u.id}>
-                                   <NavLink to={`/Profile/${u.id}`} className="linkToProfile">
-                                   <img className="userItem__photo" src={ (u.photos.small)? u.photos.small : profile_default_photo } />
-                                   <div className="userItem__name">
-                                       <div className="userItem__name_nickname">{u.name}</div>
-                                       <div className="userItem__name_status">{u.status}</div>
-                                   </div>
-                                   </NavLink>
-                                   { u.followed ?  <button className="userItem__unfollow_btn" onClick={
-                                                    ()=>{this.props.unfollowThunkCreator(u.id) }}>Unfollow</button>
-                                                :  <button  className="userItem__follow_btn" onClick={
-                                                   ()=>{ this.props.followThunkCreator(u.id)} }>Follow</button> }
-                               </div>
+    return (<div>
+        <div className="listPage_wrapper">
+            <div className="listPage_Lists">{
+                paginatorUsersChunks[currentList].map(p => {
+                    return (
+                        <div className={props.currentPage === p ? "listPage_button selectedListButton"
+                            : "listPage_button"}
+                             onClick={() => {
+                                 changeList(p)
+                             }}> {p}
+                        </div>
+                    )
+                })}</div>
+            {props.isFetching ? <Preloader/> : null}
+            {props.users.map((u) => {
+                return (
+                    <div className="userItem" key={u.id}>
+                        <NavLink to={`/Profile/${u.id}`} className="linkToProfile">
+                            <img className="userItem__photo"
+                                 src={(u.photos.small) ? u.photos.small : profile_default_photo}/>
+                            <div className="userItem__name">
+                                <div className="userItem__name_nickname">{u.name}</div>
+                                <div className="userItem__name_status">{u.status}</div>
+                            </div>
+                        </NavLink>
+                        {u.followed ? <button className="userItem__unfollow_btn" onClick={
+                                () => {
+                                    props.unfollowThunkCreator(u.id)
+                                }}>Unfollow</button>
+                            : <button className="userItem__follow_btn" onClick={
+                                () => {
+                                    props.followThunkCreator(u.id)
+                                }}>Follow</button>}
+                    </div>
 
-                        )})}
-                </div>)
+                )
+            })}
+            <button className="listPage_next_button" onClick={(currentList)=>{setCurrentList(prev=>{
+                                                                                                    if(prev===lastChunk)return lastChunk;
+                                                                                                    return ++prev}) }}>  {'>>'}  </button>
+            <button className="listPage_prev_button" onClick={(currentList)=>{setCurrentList(prev=>{if(prev===1){return 1} else return  --prev})}}>{"<<"} </button>
+        </div>
 
-    }
+    </div>)
 }
 
 export default  UserItem;
+/*
+
+let RefButton = React.forwardRef((ref,props)=>{
+    return <button ref{ref} >
+            {props.children}
+            </button>
+})
+let ref = React.createRef();
+<RefButton ref={ref}> Click me<RefButton>
+
+
+    */

@@ -16,8 +16,8 @@ class AppMainContent extends React.Component{
                 <div className="App">
                     <div>
                         <div className="wrapper">
-                            <SideBar state={this.props.state} dispatch={this.props.dispatch} />
-                            <Posts state={this.props.state} />
+                            <SideBar  />
+                            <Posts />
                         </div>)
                     </div>
                 </div>

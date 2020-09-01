@@ -32,7 +32,7 @@ export  const getTotalUsersCount = (state)=>{
 }
 
 export  const getUsersInOnePage = (state)=>{
-    return state.usersPage.usersInOnePage
+    return state.usersPage.countUsersInOnePage
 }
 export  const getCurrentPage = (state)=>{
     return state.usersPage.currentPage
@@ -42,4 +42,7 @@ export  const getIsFetching = (state)=>{
 }
 export  const getInitialized = (state)=>{
     return state.app.initialized
+}
+export  const getUsersListChunkNumber = (state)=>{
+    return state.usersPage.usersListChunkNumber
 }
