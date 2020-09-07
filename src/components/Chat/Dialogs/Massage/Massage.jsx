@@ -7,7 +7,7 @@ function Massage(props) {
       return(
          props.dialogsBlock.map( (user)=>{
             return(
-            <NavLink to={`${user.id}`} >
+            <NavLink to={`${user.id}`} key={user.id} >
                <div className="massage__block">
                   <div className="massage__block__user-photo"></div>
                   <div className="massage__block__user-name">{user.name}</div>

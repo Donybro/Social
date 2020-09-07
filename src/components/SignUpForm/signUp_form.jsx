@@ -10,7 +10,9 @@ import {getIsAuth} from "../../selectors/selectors";
 let SignUpFormContainer =(props)=>{
     let getAuthData =(dataForm)=>{
         let {password,email,rememberMe} = dataForm;
-        props.login(email,password,rememberMe)
+        props.login(email,password,rememberMe);
+       // API.getProfile()
+
 
     }   
 
@@ -21,7 +23,6 @@ const SignUpForm = (props) => {
     if(props.isAuth) {
         return <Redirect to={"/Main"}/>
     }
-    console.log(props)
     return (
         <form onSubmit={props.handleSubmit}>
             <div className="signUp_wrapper">

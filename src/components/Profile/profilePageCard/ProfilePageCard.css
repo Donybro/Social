@@ -4,34 +4,84 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: -130px;
+    position: relative;
+}
+.profilePageCard_changePhoto{
+    position: absolute;
+    top: 200px;
+    left: 50px;
 
 }
-
+.profilePageCard_changePhoto input{
+    width: 0.1px;
+    height: 0.1px;
+    visibility: hidden;
+}
+.profilePageCard_changePhoto label {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: #65C3BA;
+    border-radius: 50%;
+}
+.profilePageCard_changePhoto label img{
+    margin-top: 15px;
+    margin-left: 15px;
+}
 .profilePageCard_userPhoto{
     width: 260px;
     height: 260px;
     border-radius: 50%;
     background-color: #FF6378;
 }
+.profilePageCard_UserDescription_heads_status{
+    overflow: hidden;
+    width: 800px;
+    height: 50px;
+    text-overflow: ellipsis;
+}
 .profilePageCard_userInfo{
     height: 145px;
-    width: 640px;
-    border: 1px solid #6ec379;
+    border-radius: 5px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-self: center;
 }
-
+.profilePageCard_UserDescription_heads{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #2f948a;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.profilePageCard_UserDescription_heads p {
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    font-weight: normal;
+    padding-top: 15px;
+    margin-left: -30px;
+}
 .profilePageCard_userName{
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
-    height: 60px;
-    border: 1px solid #aba906;
-    margin-left: 50px;
+    height: 72px;
+    padding-left: 50px;
     font-size: 40px;
     line-height: 59px;
-    /* identical to box height */
-
+    color: #FFFFFF;
+}
+.profilePageCard_edit{
+    width: 150px;
+    height: 30px;
+    background: #65C3BA;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
 
     color: #FFFFFF;
 }
@@ -56,18 +106,137 @@
     box-sizing: border-box;
     width: 730px;
     height: 100%;
-    border: 1px solid rgba(50, 50, 208, 0.88);
     margin: 0 auto;
-    margin-top: 30px;
     padding: 10px;
     font-size: 18px;
     line-height: 30px;
+    margin-top: 30px;
+
 }
 .profilePageCard__changeStatus_input{
-    border: 1px solid #000;
-    height: 100%;
-    width: 730px;
-    padding: 10px;
+    border: 1px solid #2f948a;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+.contact{
+    padding-left: 20px;
+}
+.contacts_wrapper{
+    display: flex;
+   flex-direction: column;
+    width : 100%;
+    margin-bottom: 10px;
+}
+.contactForm{
     font-size: 18px;
-    line-height: 30px;
+    line-height: 21px;
+    color: #8A8A8A;
+    width: 250px;
+    border-bottom: 1px solid #65C3BA;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    margin-left: -50px;
+    margin-bottom: 10px;
+
+}.contact img{
+     width: 40px;
+     height: 40px;
+}
+.contact p{
+    display: inline-block;
+    padding-left: 50px;
+}
+.contact a{
+    color: #3B79B3;
+    text-decoration: underline;
+}
+.profilePageCard_UserDescription_blank_userName{
+    width: 345px;
+    height: 40px;
+    padding: 10px 10px 10px 20px;
+    resize: none;
+    font-size: 18px;
+    line-height: 21px;
+    background: #FFFFFF;
+    border: 1px solid #8A8A8A;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.profilePageCard_UserDescription_blank_lookingForJob{
+    height: 20px;
+    width: 20px;
+}
+.profilePageCard_UserDescription_blank_workDescription{
+    width: 345px;
+    height: 80px;
+    padding: 10px 10px 10px 20px;
+    resize: none;
+    font-size: 18px;
+    line-height: 21px;
+    background: #FFFFFF;
+    border: 1px solid #8A8A8A;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.profilePageCard_UserDescription_blank_abouMe{
+    width: 345px;
+    height: 80px;
+    padding: 10px 10px 10px 20px;
+    resize: none;
+    font-size: 18px;
+    line-height: 21px;
+    background: #FFFFFF;
+    border: 1px solid #8A8A8A;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.profilePageCard_UserDescription_blank{
+    width: 685px;
+    margin-bottom: 30px;
+    display: flex;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+.profilePageCard_UserDescription_blank div{
+}
+.profilePageCard_UserDescription_contact_blank_contacts{
+    background: #FFFFFF;
+    border: 1px solid #8A8A8A;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 445px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0 20px 20px;
+}
+.profilePageCard_UserDescription_contact_blank_contacts_item{
+    display: flex;
+    justify-content: space-around;
+    width: 440px;
+}
+.profilePageCard_UserDescription_contact_blank_contacts_item div{
+    font-size: 18px;
+    line-height: 21px;
+    color: #8A8A8A;
+}
+.profilePageCard_save_btn{
+    width: 220px;
+    height: 45px;
+    background: #65C3BA;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 470px;
 }

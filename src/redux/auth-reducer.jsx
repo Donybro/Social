@@ -3,12 +3,14 @@ import {stopSubmit} from "redux-form";
 const  AUTH = "SOCIAL/AUTH/AUTH";
 const  LOGOUT = "SOCIAL/AUTH/LOGOUT";
 const SET_AUTH_USERS_DATA = "SOCIAL/AUTH/SET_AUTH_USERS_DATA"
+const SET_USER_PHOTO = "SOCIAL/AUTH/SET_USER_PHOTO"
 
 let initialState = {
     userId:null,
     email:null,
     login:null,
     isAuth : false,
+    photos:{}
 }
 function authReducer(state = initialState,action){
       switch (action.type) {
@@ -21,6 +23,11 @@ function authReducer(state = initialState,action){
               return {
                   ...state,
                   isAuth: action.isAuth,
+              }
+          case SET_USER_PHOTO:
+              return {
+                  ...state,
+                 photos:action.photos
               }
          default:
             return state;
@@ -40,6 +47,9 @@ export  const getAuthMeThunkCreator =() =>{
                 let {id, email, login} = response.data.data;
                 dispatch(setAuthUsersData(id, email, login));
                 dispatch(isAuthAC(true));
+                dispatch(getUserPhotoTC(id))
+                    .then(photos=>{
+                        dispatch(setUserPhotoAC(photos))})
             }
         })
     }
@@ -70,9 +80,23 @@ export  const logout = ()=>{
             })
     }
 }
+export  const getUserPhotoTC= (id)=>{
+    return (dispatch)=>{
+      return  API.getProfile(id)
+           .then(response=>{
+               return response.data.photos
+           })
+    }
+}
 export const isAuthAC = (isAuth)=>{
     return{
         type : AUTH,
         isAuth,
+    }
+}
+export const setUserPhotoAC = (photos)=>{
+    return{
+        type : SET_USER_PHOTO,
+        photos,
     }
 }

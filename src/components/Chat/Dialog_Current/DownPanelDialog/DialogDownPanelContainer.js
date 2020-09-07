@@ -2,7 +2,7 @@ import DialogDownPanel from "./DialogDownPanel";
 import {sendMassageAC} from "../../../../redux/chat-reducer"
 import {connect} from "react-redux";
 import {compose} from "redux";
-import {reduxForm} from "redux-form";
+import {reduxForm,reset} from "redux-form";
 import React from "react";
 import {getCurrentMassage} from "../../../../selectors/selectors";
 
@@ -21,7 +21,10 @@ let DialogDownPanelContainer =(props)=>{
         <DialogDownPanelReduxForm onSubmit={sendMassage}/>
     )
 }
-let DialogDownPanelReduxForm = reduxForm({form:"sendMassageForm"})(DialogDownPanel)
+const afterSubmit = (result, dispatch) =>
+    dispatch(reset('sendMassageForm'));
+
+let DialogDownPanelReduxForm = reduxForm({form:"sendMassageForm",onSubmitSuccess:afterSubmit})(DialogDownPanel)
 
 export  default compose(
     connect(mapStateToProps,{sendMassageAC})

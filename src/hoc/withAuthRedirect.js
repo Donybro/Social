@@ -17,7 +17,7 @@ const withAuthRedirect = (Component)=>{
            if(!this.props.isAuth){
                return <Redirect to={"SignUp"}/>
            }
-           return <Component {...this.props}/>
+           return <Component  {...this.props}/>
         }
     }
     let connectedRedirectComponent =connect(mapStateToProps)(RedirectComponent)

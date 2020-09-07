@@ -37,6 +37,18 @@ let API ={
     },
     logout(){
         return instance.delete(`auth/login`)
+    },
+    setProfileSettings(profileSettings){
+        return instance.put(`profile`,profileSettings)
+    },
+    setProfilePhoto(photo){
+        let formData = new FormData();
+        formData.append("image",photo);
+        return instance.post('/profile/photo',formData,{
+            headers:{
+                'Content-Type':"multipart/form-data"
+            }
+        })
     }
 
 }

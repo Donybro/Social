@@ -10,9 +10,10 @@ import ReduxSignUpForm from "./components/SignUpForm/signUp_form";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
-import {getInitialized} from "./selectors/selectors";
+import {getInitialized, getMyId} from "./selectors/selectors";
 import Preloader from "./components/common/Preloader/Preloader";
-import {foo} from "./paginator";
+import {getProfileTC} from "./redux/profile-reducer";
+import WelcomePage from "./components/WelcomePage";
 
 const Users = React.lazy(() => import('./components/Users/UsersBlock'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
@@ -28,6 +29,8 @@ class App extends React.Component{
         return (
             <HashRouter>
                 <MenuBar/>
+                <Route exact path='/' component={ReduxSignUpForm}/>
+                {/*<Route exact path={"/"} render={()=>{return <WelcomePage/>}} />*/}
                 <Route path="/Main" render={()=>{ return <AppMainContentContainer /> }} />
 
                 <Route path='/SignUp' component={ReduxSignUpForm}/>
@@ -47,8 +50,9 @@ class App extends React.Component{
 }
 
 let mapStateToProps = (state)=>({
-    initialized : getInitialized(state)
+    initialized : getInitialized(state),
+    userId: getMyId(state)
 })
 export default compose(
-    connect(mapStateToProps,{initializeApp}),
+    connect(mapStateToProps,{initializeApp,getProfileTC}),
 )(App)

@@ -31,7 +31,7 @@ function UserItem(props) {
             <div className="listPage_Lists">{
                 paginatorUsersChunks[currentList].map(p => {
                     return (
-                        <div className={props.currentPage === p ? "listPage_button selectedListButton"
+                        <div key={p} className={props.currentPage === p ? "listPage_button selectedListButton"
                             : "listPage_button"}
                              onClick={() => {
                                  changeList(p)

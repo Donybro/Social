@@ -1,10 +1,11 @@
 import PostItem from "./post_item";
 import {connect} from "react-redux";
-import {getPosts} from "../../../../selectors/selectors";
+import {getPosts, getProfile} from "../../../../selectors/selectors";
 
 let mapStateToProps = (state)=>{
     return {
-        posts : getPosts(state)
+        posts : getPosts(state),
+        userProfile : getProfile(state),
     }
 }
 

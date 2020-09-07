@@ -8,8 +8,13 @@ import {getAuthMeThunkCreator} from "../../redux/auth-reducer";
 import "./AppMainContent.css"
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {getProfileTC} from "../../redux/profile-reducer";
 
 class AppMainContent extends React.Component{
+    componentDidMount() {
+        this.props.getProfileTC(this.props.userId);
+    }
+
     render(){
        return (
             <div className="wrapper_main">
@@ -27,12 +32,13 @@ class AppMainContent extends React.Component{
 
  const mapStateToProps = (state)=>{
     return{
-        isAuth:state.auth.isAuth
+        isAuth:state.auth.isAuth,
+        userId: state.auth.userId
     }
 }
 
 export default compose(
-    connect(mapStateToProps,{getAuthMeThunkCreator}),
+    connect(mapStateToProps,{getAuthMeThunkCreator,getProfileTC}),
     withAuthRedirect,
 )(AppMainContent);
 

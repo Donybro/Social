@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import addPictureIcon from "../../../../assets/current_dialog/addPicture.png"
 import addSmileIcon from "../../../../assets/current_dialog/smile.png"
 import sendIcon from "../../../../assets/current_dialog/send.png"
@@ -9,6 +9,7 @@ import {Field} from "redux-form";
 
 
 function DialogDownPanel(props) {
+
     return (
         <form onSubmit={props.handleSubmit}>
                 <div className="currentDialog__downpanel">

@@ -54,6 +54,7 @@
   margin-left: 32px;
   width: 74px;
   height: 27px;
+  display: flex;
 }
 
 .panel_data p {

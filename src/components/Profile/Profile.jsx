@@ -6,7 +6,7 @@ let Profile  = (props)=>{
     return  <div className="profile__wrapper">
                 <div className="profilePage">
                         <div className="profilePage__background_photo"><img src={bgPhoto} alt=""/></div>
-                        <ProfilePageCard profile={props.profile} status={props.status} setStatus={props.setStatusAC} updateStatusTC={props.updateStatusTC}/>
+                        <ProfilePageCard myId={props.myId} isOwner={props.isOwner} setProfilePhoto={props.setProfilePhoto} profile={props.profile} status={props.status} setStatus={props.setStatusAC} updateStatusTC={props.updateStatusTC}/>
 
                 </div>
             </div>

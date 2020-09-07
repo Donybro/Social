@@ -27,7 +27,7 @@ export default appReducer;
 export  const initializeApp= ()=>{
     return (dispatch)=>{
        let authMePromise =  dispatch(getAuthMeThunkCreator());
-       Promise.all([authMePromise])
+       return Promise.all([authMePromise])
            .then(()=>{
                dispatch(initializeSuccess())
            })

@@ -36,9 +36,9 @@
  width: 480px;
  height: 100%;
  resize: none;
- padding-top: 0px;
  font-size: 18px;
  line-height: 16px;
+ padding-top: 15px;
  padding-left: 15px;
  padding-right: 10px;
 }
