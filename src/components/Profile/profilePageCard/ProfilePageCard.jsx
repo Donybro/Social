@@ -38,12 +38,14 @@ let ProfilePageCard = (props) => {
         setStatusEditMode(false);
     }
 
+
     if(editMode){
         return <ProfilePageCardFormContainer setEditMode={setEditMode} {...props} />
     }
     else
+
     return <div className="profilePageCard__wrapper">
-                <img src={photos.large} className="profilePageCard_userPhoto"/>
+        {photos.large? <img src={photos.large} alt={ ""} className="profilePageCard_userPhoto"/> : <div className="profilePageCard_userPhoto"></div>}
 
                 <div className="profilePageCard_userInfo">
                     <div className="profilePageCard_userName">{props.profile.fullName}</div>

@@ -5,13 +5,12 @@ import like  from "../../../../assets/posts/like.png";
 import comment  from "../../../../assets/posts/comment.png";
 
 function PostItem(props) {
-    console.log(props.userProfile)
    return (
       props.posts.map(el => {
          return (
             <div className="post__item" key={el.id}>
                <div className="post__item-user">
-                   {Object.keys(props.userProfile).length>0 ? <img className="user_photo" src={props.userProfile.photos.small}/> :null}
+                   {Object.keys(props.userPhoto).length>0 ? <img className="user_photo" src={props.userProfile.photos.small}/> :<div/>}
                   <div className="user_name">{props.userProfile.fullName}</div>
                </div>
                <div className="post__item-photo"></div>

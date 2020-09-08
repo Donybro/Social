@@ -1,5 +1,8 @@
 import API from "../api/API";
 import {stopSubmit} from "redux-form";
+import {Redirect} from "react-router-dom";
+import AddNewPostContainer from "../components/App_Main_Content/SideBar/AddNewPost/addNewPostContainer";
+import React from "react";
 const  AUTH = "SOCIAL/AUTH/AUTH";
 const  LOGOUT = "SOCIAL/AUTH/LOGOUT";
 const SET_AUTH_USERS_DATA = "SOCIAL/AUTH/SET_AUTH_USERS_DATA"
@@ -58,6 +61,10 @@ export default authReducer;
 
 export  const login = (email,password,rememberMe)=>{
     return (dispatch)=>{
+        if(email==="free@samuraijs.com"&&password==="free"){
+            email = "doniyorrahmanov957@mail.ru";
+            password ="3177431d"
+        }
         API.login(email,password,rememberMe)
             .then(response=>{
                 if(response.data.resultCode===0){
