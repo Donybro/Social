@@ -10,7 +10,7 @@ function PostItem(props) {
          return (
             <div className="post__item" key={el.id}>
                <div className="post__item-user">
-                   {Object.keys(props.userPhoto).length>0 ? <img className="user_photo" src={props.userProfile.photos.small}/> :<div/>}
+                   {Object.keys(props.userPhoto).length>0 ? <img className="user_photo" src={ props.userPhoto.small}/> :<div/>}
                   <div className="user_name">{props.userProfile.fullName}</div>
                </div>
                <div className="post__item-photo"></div>
